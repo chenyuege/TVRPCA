@@ -1,15 +1,15 @@
 # TVRPCA
 combine TV regularization with RPCA framework
 The structure of code is:
-	-src:
-		-compared method
-			-RPCA
-			-WNNM
-			-LRTV   
-		-modified RPCA with TV prior
-	-data:
-    	-simulated data
-    	-real data
+ * src:
+ 	* compared method
+		* RPCA
+		* WNNM
+		* LRTV   
+	* modified RPCA with TV prior
+* data:
+	* simulated data
+	* real data
 未完待续。。。
 
 目前实验的比较部分已经完成
