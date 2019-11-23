@@ -1,0 +1,10 @@
+%% 给定一个矩阵，由AX=L，指定A和L，反解出X
+function outmatrix = InverseTV(inmatrix)
+[h,w] = size(inmatrix);
+Eny_x   = ( abs(psf2otf([+1; -1], [h,w])) ).^2  ;
+determ  = Eny_x;
+diffT_p  = diff_xT(inmatrix,[h,w]);
+numer1   = reshape( diffT_p, [h,w]);
+determ(1,:) = inmatrix(1,:);
+x        = real( ifftn( fftn(numer1) ./determ) );
+outmatrix    = reshape(x,[h,w]);

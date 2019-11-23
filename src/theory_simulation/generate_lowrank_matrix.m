@@ -1,0 +1,9 @@
+function outer_matrix = generate_lowrank_matrix(row,col,rank)
+% outer_matrix1 = normrnd(0,1/row,row,rank);
+% outer_matrix2 = normrnd(0,1/col,col,rank);
+outer_matrix1 = normrnd(0,1/row,row,rank);
+outer_matrix2 = normrnd(0,1/row,col,rank);
+outer_matrix  = outer_matrix1*outer_matrix2';
+% outer_matrix1 = generate_piece_matrix(row,rank);
+% outer_matrix2 = generate_piece_matrix(col,rank);
+% outer_matrix  = outer_matrix1*outer_matrix2';
